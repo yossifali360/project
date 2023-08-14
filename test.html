@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Assets/stylesheets/bootstrap.min.css" />
+</head>
+<style>
+    :root {
+  --color-primary: #0ea2bd;
+}
+body{
+  position: relative;
+}
+.logo {
+  height: 60px;
+  width: 100px;
+}
+.nav-item a {
+  font-size: 16px;
+  font-weight: 400;
+}
+.navbar ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  visibility: hidden;
+  transition: 0.3s;
+  transform: scaleX(0);
+}
+.navbar ul li a:hover:before {
+  visibility: visible;
+  transform: scaleX(0.9);
+}
+nav .fa-magnifying-glass {
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* Products */
+.card {
+    height: 500px;
+  overflow: hidden;
+  border: none;
+}
+.card:hover .card-img-top {
+  transform: scale(1.2, 1.2);
+}
+
+.card-title{
+font-size: 20px !important;
+}
+.card .btn{
+  bottom: 0;
+}
+.card-img-top {
+  margin-top: 10px;
+  background-color: #ececec;
+  width: 70%;
+  z-index: -1;
+}
+.icons {
+  top: 50%;
+  right: 0;
+  opacity: 0;
+  font-size: 18px;
+  background: #fff;
+  border-radius: 50px;
+  transform: translateY(-50%);
+  box-shadow: 24px 13px 46px 11px rgba(48, 117, 208, 0.85);
+  transition: 0.5s ease-in-out;
+}
+.icon-text {
+  background-color: transparent;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+  line-height: 20px;
+}
+.hiddenHeart {
+  visibility: hidden;
+  display: block;
+}
+.hiddenVeiw {
+  visibility: hidden;
+  display: block;
+}
+.card:hover .icons {
+  right: 75%;
+  opacity: 1;
+}
+.icons i:hover {
+  background-color: #ff0000;
+  border-radius: 50px;
+}
+.discount {
+  background-color: #fff;
+  top: 30px;
+  right: 20px;
+  box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.46);
+  transition: 0.5s;
+}
+.discount:hover {
+  background-color: rgb(0, 0, 255);
+  color: #fff;
+}
+.all {
+  gap: 1rem;
+}
+.all i {
+  background-color: black;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 50%;
+  align-items: stretch;
+}
+.all p {
+  margin-top: 13px;
+}
+/*  */
+
+/* read more */
+.video i {
+  font-size: 30px;
+  color: #e60b0b;
+  background: var(--color-primary-light);
+  padding: 25px;
+  border-radius: 50%;
+}
+.read__btn {
+  color: white;
+  padding: 0;
+  min-height: 400px;
+  background-color: #0ea2bd;
+}
+.read__btn i {
+  color: var(--color-primary);
+  margin: 10px;
+}
+.read__btn .overlay {
+  background: #2f3740a6;
+  width: 100%;
+  height: 100%;
+}
+.read__btn button {
+  width: fit-content;
+}
+.read__btn button i {
+  color: #fff;
+}
+#productOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000cc;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+}
+.content{
+  background-color: #f4f2f2;
+}
+
+#closeProduct {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*  */
+.content{
+  width: 70%;
+}
+#mainImg{
+  width: 50%;
+}
+section .active{
+  border: #0ea2bd 1px solid;
+  background: rgb(169, 235, 177);
+}
+.stock{
+  transform: translateX(80%);
+}
+.loading{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 99;
+}
+</style>
+<body>
+    <div class="card col-md-4 col-lg-3 col-6">
+        <div class="border overflow-hidden rounded-5 h-100 d-flex flex-column justify-content-between">
+            <div class="position-relative">
+            <img class="card-img-top rounded-pill mx-auto d-block p-1" src="data:image/jpeg;base64,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" alt="Card image cap">
+            <div class="icons p-2 d-flex flex-column position-absolute">
+                <i class="fa-regular fa-heart p-2 cardIcon"></i>
+                <i class="fas fa-magnifying-glass p-2 cardIcon"></i>
+            </div>
+            <div class="icon-text position-absolute" id="icon-text">
+                <span class="bg-danger m-2 p-1 rounded-4 text-center hiddenHeart text-white mx-4">Add to Wishlist</span>
+                <span class="bg-danger m-2 p-1 rounded-4 text-center hiddenVeiw text-white mx-4">View</span>
+            </div>
+            </div>
+            <div class="card-body text-center">
+                <span class="card-title  fs-3">Lorem ipsum dolor sit amet.</span>
+                <h6 class="price text-danger fs-3">600<span>EGP</span></h6>
+                <button class="btn btn-info d-block m-auto">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

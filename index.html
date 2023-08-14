@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="Assets/stylesheets/all.min.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="Assets/stylesheets/bootstrap.min.css" />
+    <!-- WOW -->
+    <link rel="stylesheet" href="Assets/stylesheets/animate.css" />
+    <!-- Own Style -->
+    <link rel="stylesheet" href="Assets/stylesheets/master.css" />
+    <!-- Title -->
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="loadingIcon"><img src="Assets/images/load.gif" alt=""></div>
+    <nav class="navbar navbar-expand-lg navbar-light px-3 " id="nav">
+      <a class="navbar-brand fs-2" href="#">
+        <img src="Assets/images/logo.png" alt="Logo" class="logo" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item m-2 active">
+            <a class="nav-link position-relative" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item m-2 dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Categories
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item m-2">
+            <a class="nav-link position-relative" href="#">Special Offer</a>
+          </li>
+          <li class="nav-item m-2">
+            <a class="nav-link position-relative" href="#">About Us</a>
+          </li>
+          <li class="nav-item m-2">
+            <a class="nav-link position-relative" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <i class="fas fa-magnifying-glass position-absolute"></i>
+        </form>
+      </div>
+    </nav>
+    <section class="Products">
+        <div class="container">
+          <div class="productCtn row g-3 mt-5 align-items-stretch">
+                  <!-- <div class="discount position-absolute rounded-pill px-1 py-3">Discount !</div> -->
+          <div class="productOverlay" id="productOverlay">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <div class="content d-flex align-items-center justify-content-center p-5 rounded-3">
+                <div class="imgsCtn col-6 d-flex flex-column">
+                  <div class="main d-flex align-items-center justify-content-center p-4">
+                    <img src="Assets/images/board/1.jpg" alt="" id="mainImg" class="shadow">
+                  </div>
+                  <div class="d-flex overflow-hidden m-2">
+                    <div class="img1 col-3">
+                      <img src="Assets/images/board/1.jpg" alt="" class="w-100 p-2 pImage rounded-2 active">
+                    </div>
+                    <div class="img2 col-3">
+                      <img src="Assets/images/board/2.jpg" alt="" class="w-100 p-2 pImage rounded-2">
+                    </div>
+                    <div class="img3 col-3">
+                      <img src="Assets/images/board/3.jpg" alt="" class="w-100 p-2 pImage rounded-2">
+                    </div>
+                    <div class="img4 col-3">
+                      <img src="Assets/images/board/4.jpg" alt="" class="w-100 p-2 pImage rounded-2">
+                    </div>
+                  </div>
+                </div>
+                <div class="infoCtn col-6">
+                  <h4>GIGABYTE B760M DS3H DDR5 LGA 1700 ATX Motherboard Integrated Realtek 7.1 channel audio chip,2.5GbE network card, PCI-E 4.0, PCI-E 3.0, USB 3.2</h4>
+                  <div class="info">
+                    <ul>
+                      <li>Intel® Socket LGA 1700：Support 13th and 12th Gen Series Processors</li>
+                      <li>Unparalleled Performance：Hybrid 6+2+1 Phases Digital VRM Solution</li>
+                      <li>Dual Channel DDR5：4*DIMMs XMP Memory Module Support</li>
+                      <li>Next Generation Storage：2*PCIe 4.0 x4 M.2 Connectors</li>
+                      <li>M.2 Thermal Guard：To Ensure M.2 SSD Performance</li>
+                      <li>EZ-Latch：PCIe 4.0x16 Slot with Quick Release Design</li>
+                      <li>Fast Networks：2.5GbE LAN</li>
+                      <li>Extended Connectivity：Rear USB-C® 10Gb/s, DP, HDMI</li>
+                      <li>Smart Fan 6：Features Multiple Temperature Sensors, Hybrid Fan Headers with FAN STOP</li>
+                      <li>Q-Flash Plus：Update BIOS Without Installing the CPU, Memory and Graphics Card</li>
+                      <div class="text-success stock"> <i class="fas fa-check px-2"></i>IN STOCK</div>
+                    </ul>
+                  </div>
+                  <button class="btn btn-info w-100"> <i class="fas fa-cart-shopping text-white px-2"></i> Add To Cart</button>
+                </div>
+              </div>
+            </div>
+            <a id="closeProduct" class="fas fa-x"></a>
+          </div>
+          </div>
+        </div>
+          <!-- End -->  
+        </div>
+    </section>
+    </div>
+    <!-- Bootstrap js -->
+    <script src="Assets/javascript/bootstrap.bundle.min.js"></script>
+    <!-- WOW -->
+    <script src="Assets/javascript/wow.min.js"></script>
+    <!-- JS -->
+    <script type="module" src="Assets/javascript/productsdata.js"></script>
+    <script type="module" src="Assets/javascript/index.js"></script>
+    <!-- <script type="module" src="Assets/javascript/toast.js"></script>
+    <script>
+              toasts.push({
+            title: 'Success Toast',
+            content: 'My notification description.',
+            style: 'success'
+        }); -->
+    </script>
+  </body>
+</html>

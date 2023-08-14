@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="Assets/stylesheets/all.min.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="Assets/stylesheets/bootstrap.min.css" />
+    <!-- WOW -->
+    <link rel="stylesheet" href="Assets/stylesheets/animate.css" />
+    <!-- Own Style -->
+    <link rel="stylesheet" href="Assets/stylesheets/master.css" />
+    <link rel="stylesheet" href="Assets/stylesheets/cart.css" />
+    <!-- Title -->
+    <link rel="stylesheet" href="Assets/stylesheets/sweetalert2.min.css">
+
+    <title>Shopping Cart</title>
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-light px-3 " id="nav">
+    <a class="navbar-brand fs-2" href="#">
+    <img src="Assets/images/logo.png" alt="Logo" class="logo" />
+    </a>
+    <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+    >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto">
+            <li class="nav-item m-2 active">
+                <a class="nav-link position-relative" href="#"
+                >Home <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item m-2 dropdown">
+                <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                >
+                    Categories
+                </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </li>
+        <li class="nav-item m-2">
+            <a class="nav-link position-relative" href="#">Special Offer</a>
+        </li>
+        <li class="nav-item m-2">
+            <a class="nav-link position-relative" href="#">About Us</a>
+        </li>
+        <li class="nav-item m-2">
+            <a class="nav-link position-relative" href="#">Contact Us</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <i class="fas fa-magnifying-glass position-absolute"></i>
+      </form>
+    </div>
+  </nav>
+<body>
+    <section class="shoppingCart container">
+        <div class="row p-0 flex-column flex-lg-row">
+            <div class="col-12 col-lg-8">
+                <div class="item d-flex align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="d-flex align-items-center">
+                        <img src="https://www.elnekhelytechnology.com/image/cache/catalog/AAW/2%20Bazooka-270x270.png" alt="" class="rounded-4">
+                        <div class="info">
+                            <h6 class="text-info">MSI MAG B660M BAZOOKA DDR4</h6>
+                            <div class="brand px-1">Motherboard , MSI</div>
+                            <i class="fa-solid fa-trash bg-primary text-white rounded-2 my-2"></i>
+                            <i class="fas fa-heart bg-danger text-white rounded-2 my-2"></i>
+                        </div>
+                    </div>
+                    <div class="quantityCtn d-flex align-items-center justify-content-between d-sm-block px-4">
+                        <div class="quantity p-2  d-flex bg-secondary-subtle rounded-2">
+                            <i class="fas fa-plus rounded-1 bg-primary text-white"></i>
+                            <span class="count px-4">2</span>
+                            <i class="fas fa-minus rounded-1 bg-primary text-white"></i>
+                        </div>
+                        <div class="itemsPrice text-muted text-center">
+                            2500 EGP
+                        </div>
+                    </div>
+                </div>
+                <hr  class="mx-5">
+            </div>  
+            <div class="col-12 col-lg-4">
+                <h4>Summary</h4>
+                <hr>
+                <div class="d-flex justify-content-between px-3">
+                    <h6>Products</h6>
+                    <h6 class="text-muted">2500</h6>
+                </div>
+                <div class="d-flex justify-content-between px-3">
+                    <h6>Shipping</h6>
+                    <h6 class="text-muted">200</h6>
+                </div>
+                <hr class="mx-3">
+                <div class="d-flex justify-content-between px-3">
+                    <strong>Total amount (including VAT)</strong>
+                    <strong class="text-muted">2700</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="Assets/javascript/sweetalert2.all.min.js"></script>
+    <script>
+        let test = document.getElementById("test");
+        console.log(test);
+        test.addEventListener("click",function(){
+            const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-right',
+  iconColor: 'white',
+  customClass: {
+    popup: 'colored-toast'
+  },
+  showConfirmButton: false,
+  timer: 3500,
+  timerProgressBar: true
+})
+Toast.fire({
+  icon: 'success',
+  title: 'Success'
+})
+
+})
+    </script>
+</body>
+</html>

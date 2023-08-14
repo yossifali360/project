@@ -1,0 +1,142 @@
+:root {
+  --color-primary: #0ea2bd;
+}
+body{
+  position: relative;
+}
+.logo {
+  height: 60px;
+  width: 100px;
+}
+.nav-item a {
+  font-size: 16px;
+  font-weight: 400;
+}
+.navbar ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  visibility: hidden;
+  transition: 0.3s;
+  transform: scaleX(0);
+}
+.navbar ul li a:hover:before {
+  visibility: visible;
+  transform: scaleX(0.9);
+}
+nav .fa-magnifying-glass {
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* Products */
+.Products .container{
+  width: 80%;
+}
+.Products .productCard {
+  overflow: hidden;
+  border: none;
+  overflow-wrap: break-word;
+}
+.Products .productCard:hover .card-img-top {
+  transform: scale(1.2, 1.2);
+}
+.Products .card-title{
+font-size: 24px !important;
+}
+.Products .card-img-top {
+  background-color: #ececec;
+  width: 70%;
+  z-index: -1;
+}
+.Products .cardIcons {
+  top: 50%;
+  right: 0;
+  opacity: 0;
+  font-size: 18px;
+  background: #fff;
+  border-radius: 50px;
+  transform: translateY(-50%);
+  box-shadow: 24px 13px 46px 11px rgba(48, 117, 208, 0.85);
+  transition: 0.5s ease-in-out;
+}
+.Products .icon-text {
+  background-color: transparent;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+  line-height: 20px;
+}
+.Products .hiddenHeart {
+  visibility: hidden;
+  display: block;
+}
+.Products .hiddenVeiw {
+  visibility: hidden;
+  display: block;
+}
+.Products .productCard:hover .cardIcons {
+  right: 75%;
+  opacity: 1;
+}
+.Products .cardIcons i:hover {
+  background-color: #ff0000;
+  border-radius: 50px;
+}
+/* .discount {
+  background-color: #fff;
+  top: 30px;
+  right: 20px;
+  box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.46);
+  transition: 0.5s;
+}
+.discount:hover {
+  background-color: rgb(0, 0, 255);
+  color: #fff;
+} */
+.Products #productOverlay {
+  display: none;
+  position: fixed;
+  top: -17px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000cc;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+}
+.Products .content{
+  background-color: #f4f2f2;
+  width: 70%;
+}
+.Products #closeProduct {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.Products #mainImg{
+  width: 50%;
+}
+.Products .active{
+  border: #0ea2bd 1px solid;
+  background: rgb(169, 235, 177);
+}
+.Products .stock{
+  transform: translateX(80%);
+}
+.loadingIcon{
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 99;
+}
