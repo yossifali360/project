@@ -1,19 +1,19 @@
 import {products} from './productsdata.js';
 const productCtn = document.querySelector(".productCtn")
 checkStorage();
-let elements = "";
+// let elements = "";
 getData().forEach(product => {
-  elements+=loadProducts(product)
+  productCtn.innerHTML+=loadProducts(product)
 })
-  productCtn.innerHTML = elements;
-
-
+  // productCtn.innerHTML = elements;
+const productOverlay = document.getElementById("productOverlay")
 const productViewMainImg = document.getElementById("mainImg")
 const productViewImages = document.querySelectorAll(".pImage")
 const productCards = document.querySelectorAll(".productCard");
 const loadingIcon = document.querySelector(".loadingIcon");
+const closeProduct = document.getElementById("closeProduct");
 const cart = JSON.parse(localStorage.getItem("cart"));
-
+console.log(closeProduct);
 // 
 
 // 
